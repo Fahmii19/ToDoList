@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get("todolist/delete/{id}", "ApiTodoListController@postDelete");
+Route::post("todolist/update/{id}", "ApiTodoListController@postUpdate");
+Route::post("todolist/create/{id}", "ApiTodoListController@postCreate");
+Route::get("todolist/list", "ApiTodoListController@getList");
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
